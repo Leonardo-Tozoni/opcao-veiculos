@@ -1,0 +1,87 @@
+@use '../base' as *;
+
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/forms
+
+// --------------------------------
+
+:root {
+  --form-control-font-size: 1em;
+  --form-control-padding-x: var(--space-xs);
+  --form-control-padding-y: var(--space-xxs);
+  --form-control-radius: var(--radius-md);
+}
+
+.form-control {
+  background: var(--color-white);
+  line-height: 1.2;
+  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower);
+  transition: all 0.2s ease;
+  border: 1px solid green;
+  border-radius: inherit;
+  resize: none;
+
+  &::placeholder {
+    opacity: 1;  
+    color: var(--color-contrast-low);
+  }
+
+  &:focus {
+    background: var(--color-bg);
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-primary), var(--shadow-sm);
+    outline: none;
+  }
+}
+
+.form-control--disabled, .form-control[disabled], .form-control[readonly] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-control[aria-invalid="true"], .form-control.form-control--error {
+  box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error);
+
+  &:focus {
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);
+  }
+}
+
+.btn-form {
+  background-color: var(--color-accent);
+    width: 210px;
+    padding: var(--space-xs) var(--space-md);
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    border: none;
+    transition: transform 0.2s, background-color 0.2s;
+
+    &:hover {
+      background-color: var(--color-accent-lighter);
+    }
+  
+    &:hover a {
+      color: #fff;
+    }
+  
+    &:active {
+      transform: translateY(2px);
+    }
+  
+    &:focus {
+      outline: 2px solid alpha(var(--color-primary), 0.2);
+      outline-offset: 2px;
+    }
+}
+
+.form-legend {}
+
+.form-label {}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------

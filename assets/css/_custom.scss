@@ -1,0 +1,43 @@
+@use "./base" as *;
+@use "./custom-base";
+
+//seu código personalizado aqui
+
+@media (max-width: 75rem) {
+}
+
+@media (max-width: 64rem) {
+}
+
+.upDown-1 {
+    animation: upDown 1s;
+}
+
+@keyframes upDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
